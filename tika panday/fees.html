@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fees</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="brand">
+        <img src="x__1_-removebg-preview.png">
+        <span>XYZ University</span>
+    </div>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="fees.html">Fees</a>
+        <button onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<div class="content">
+    <h2>Fees</h2>
+
+<button onclick="openFeeModal()" class="add-btn">Add Fee</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Student</th>
+            <th>Amount</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="feeList"></tbody>
+</table>
+
+<div id="feeModal" class="modal">
+    <div class="modal-content">
+        <h3>Add Fee</h3>
+
+        <select id="feeStudent">
+            <option value="">Select Student</option>
+        </select>
+        <input type="number" id="feeAmount" placeholder="Amount">
+
+        <button onclick="saveFee()">Save</button>
+        <button onclick="closeFeeModal()">Cancel</button>
+    </div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

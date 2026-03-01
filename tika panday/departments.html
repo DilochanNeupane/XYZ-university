@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Departments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="brand">
+        <img src="x__1_-removebg-preview.png">
+        <span>XYZ University</span>
+    </div>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="departments.html">Departments</a>
+        <button onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<div class="content">
+    <h2>Departments</h2>
+
+<button onclick="openDeptModal()" class="add-btn">Add Department</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="departmentList"></tbody>
+</table>
+
+<div id="deptModal" class="modal">
+    <div class="modal-content">
+        <h3>Add Department</h3>
+        <input type="text" id="deptName" placeholder="Department Name">
+        <button onclick="saveDepartment()">Save</button>
+        <button onclick="closeDeptModal()">Cancel</button>
+    </div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

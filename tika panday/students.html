@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students - XYZ University</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <img src="x__1_-removebg-preview.png" alt="Logo">
+        <h2>XYZ University</h2>
+    </div>
+
+    <div class="nav-links">
+        <a href="departments.html">Departments</a>
+        <a href="courses.html">Courses</a>
+        <a href="students.html">Students</a>
+        <a href="login.html" class="logout-btn">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="header-row">
+        <h2>All Students</h2>
+        <button onclick="openStudentModal()" class="add-btn">+ New Student</button>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by student name">
+        <button onclick="searchStudent()">Search</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Enroll Year</th>
+                <th>Department</th>
+                <th>Parent</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="studentList"></tbody>
+    </table>
+
+</div>
+
+<!-- STUDENT MODAL -->
+<div id="studentModal" class="modal">
+    <div class="modal-content large">
+        <h3>Add Student</h3>
+
+        <input type="text" id="name" placeholder="Full Name">
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <input type="date" id="dob">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="phone" placeholder="Phone">
+        <input type="text" id="address" placeholder="Address">
+        <input type="text" id="city" placeholder="City">
+        <input type="text" id="state" placeholder="State">
+        <input type="number" id="year" placeholder="Enroll Year">
+
+        <select id="department"></select>
+
+        <input type="text" id="parent" placeholder="Parent Name">
+
+        <button onclick="saveStudent()">Save</button>
+        <button onclick="closeStudentModal()">Cancel</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

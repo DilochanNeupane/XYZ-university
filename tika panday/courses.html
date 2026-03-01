@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="brand">
+        <img src="x__1_-removebg-preview.png">
+        <span>XYZ University</span>
+    </div>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="courses.html">Courses</a>
+        <button onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<div class="content">
+    <h2>Courses</h2>
+
+<button onclick="openCourseModal()" class="add-btn">Add Course</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="courseList"></tbody>
+</table>
+
+<div id="courseModal" class="modal">
+    <div class="modal-content">
+        <h3>Add Course</h3>
+        <input type="text" id="courseName" placeholder="Course Name">
+        
+        <select id="courseDept">
+            <option value="">Select Department</option>
+        </select>
+
+        <button onclick="saveCourse()">Save</button>
+        <button onclick="closeCourseModal()">Cancel</button>
+    </div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

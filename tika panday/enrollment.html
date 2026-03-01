@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="brand">
+        <img src="x__1_-removebg-preview.png">
+        <span>XYZ University</span>
+    </div>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="enrollment.html">Enrollment</a>
+        <button onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<div class="content">
+    <h2>Enrollment</h2>
+
+<button onclick="openEnrollModal()" class="add-btn">Add Enrollment</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="enrollmentList"></tbody>
+</table>
+
+<div id="enrollModal" class="modal">
+    <div class="modal-content">
+        <h3>Add Enrollment</h3>
+
+        <select id="enrollStudent">
+            <option value="">Select Student</option>
+        </select>
+        <select id="enrollCourse">
+            <option value="">Select Courses</option>
+        </select>
+
+        <button onclick="saveEnrollment()">Save</button>
+        <button onclick="closeEnrollModal()">Cancel</button>
+    </div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
